@@ -1,0 +1,96 @@
+fonts-takao (003.02.01-7.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * fonts-takao-mincho.preinst: Fix OTF alternative cleanup.
+  * ttf-takao-*.preinst: Unregister the ttf-japanese-*.ttf alternatives.
+  * fonts-takao-*.preinst: Clean up the ttf-japanese-*.ttf alternatives set up
+    by ttf-takao-* in squeeze. This needs to be done in fonts-takao-* as well
+    since there is no guarantee that the transitional ttf-takao-* packages
+    were installed and did clean this up. Since new installations of
+    fonts-takao-* cannot be distinguished from "upgrades" from ttf-takao-*
+    this needs to be run on new installations, too.  (Closes: #700054)
+
+ -- Andreas Beckmann <anbe@debian.org>  Mon, 11 Feb 2013 14:36:53 +0100
+
+fonts-takao (003.02.01-7) unstable; urgency=low
+
+  * debian/rules
+    - add xz option
+  * debian/control
+    - add "Pre-Depends: dpkg (>= 1.15.6~)"
+    - bump up debhelper version to deal with xz option
+    - replace s/Conflicts/Breaks/ to more Policy polite. 
+  * debian/compat
+    - set 9
+  * debian/fonts-takao-*.install,lintian*
+    - remove unused overrides
+  * debian/copyright
+    - set "copyright-format 1.0"
+
+ -- Hideki Yamane <henrich@debian.org>  Wed, 13 Jun 2012 04:14:11 +0900
+
+fonts-takao (003.02.01-6) unstable; urgency=low
+
+  * debian/control
+    - set Standards-Version: 3.9.3
+    - set ttf-takao{,-gothic,-mincho} as "Priority: extra"
+  * debian/rules
+    - compress with xz
+
+ -- Hideki Yamane <henrich@debian.org>  Thu, 24 May 2012 15:47:24 +0900
+
+fonts-takao (003.02.01-5) unstable; urgency=low
+
+  * rename package
+  * update README.Debian
+  * debian/fonts-takao-{gothic,mincho}.install
+    - adjust install path
+    - add lintian overrides
+  * debian/control
+    - set Standards-Version: 3.9.2
+  * debian/copyright
+    - update to DEP5 style
+    - update debian/* license to BSD-3-clause (Closes: #625749)
+
+ -- Hideki Yamane <henrich@debian.org>  Sat, 24 Sep 2011 23:11:10 +0900
+
+ttf-takao (003.02.01-4) unstable; urgency=low
+
+  [ Hideki Yamane ]
+  * debian/ttf-takao-{mincho,gothic}.preinst
+    - fix bashism, thanks to Garrett McLean <gmclean@gmail.com>
+      (Closes: #607496)
+
+ -- Hideki Yamane <henrich@debian.org>  Sun, 19 Dec 2010 08:53:18 +0900
+
+ttf-takao (003.02.01-3) unstable; urgency=low
+
+  [ Hideki Yamane ]
+  * debian/ttf-takao-{mincho,gothic}.preinst
+    - check previously introduced broken alternatvies and remove it.
+      Thanks to Ryo IGARASHI <rigarash@gmail.com> (Closes: #607046)
+  * debian/control
+    - bump up "Standards-Version: 3.9.1"
+
+ -- Hideki Yamane <henrich@debian.org>  Sat, 18 Dec 2010 13:56:21 +0900
+
+ttf-takao (003.02.01-2) unstable; urgency=low
+
+  [ Hideki Yamane ]
+  * fix "/usr/share/fonts/truetype/ttf-japanese-mincho._o_tf is installed in
+    ttf-takao-mincho" Thanks to YOSHINO Yoshihito <yy.y.ja.jp@gmail.com>
+    (Closes: #585447)
+
+ -- Hideki Yamane <henrich@debian.org>  Tue, 15 Jun 2010 01:20:34 +0900
+
+ttf-takao (003.02.01-1) unstable; urgency=low
+
+  [ Jun Kobayashi ]
+  * Initial release (Closes: #576296)
+
+  [ Hideki Yamane ]
+  * debian/control
+    - add myself to uploaders.
+    - set "Build-Depends: debhelper (>= 7.0.50~)" for backport
+
+ -- Hideki Yamane <henrich@debian.org>  Sun, 09 May 2010 00:08:45 +0900

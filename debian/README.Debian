@@ -1,0 +1,11 @@
+Takao Fonts
+-----------
+
+This package contains high quality Japanese outline fonts downloaded 
+from https://launchpad.net/takao-fonts/+download.
+
+These fonts are licensed under IPA Font License Agreement v1.0.
+
+To replace Takao Fonts with IPA and IPAex Fonts, install "fonts-ipafont" 
+and "fonts-ipaexfont" package and set your application using IPA and/or 
+IPAex Fonts.

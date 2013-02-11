@@ -1,0 +1,88 @@
+Source: fonts-takao
+Section: fonts
+Priority: optional
+Maintainer: Debian Fonts Task Force <pkg-fonts-devel@lists.alioth.debian.org>
+Uploaders: Jun Kobayashi <jkbys@ubuntu.com>, Hideki Yamane <henrich@debian.org>
+Build-Depends: debhelper (>= 9.20120518~)
+Standards-Version: 3.9.3
+Homepage: https://launchpad.net/takao-fonts
+
+Package: fonts-takao
+Architecture: all
+Pre-Depends: dpkg (>= 1.15.6~)
+Depends: ${misc:Depends}, fonts-takao-gothic, fonts-takao-mincho
+Breaks: ttf-takao (<< 003.02.01-5)
+Replaces: ttf-takao (<< 003.02.01-5)
+Description: Japanese TrueType font set, Takao Fonts
+ Takao Fonts are Japanese gothic and mincho scalable fonts. They are 
+ suitable for both display and printing. This package provides them in 
+ TrueType format.
+ .
+ Takao Fonts are based on IPA Fonts and IPAex Fonts. Takao's purpose is to 
+ make it possible to maintain and release the fonts by the community with 
+ changing their names.
+ .
+ This is metapackage, depends on fonts-takao-{mincho,gothic} packages.
+
+Package: fonts-takao-mincho
+Architecture: all
+Pre-Depends: dpkg (>= 1.15.6~)
+Depends: ${misc:Depends}
+Breaks: ttf-takao-mincho (<< 003.02.01-5)
+Replaces: ttf-takao-mincho (<< 003.02.01-5)
+Provides: fonts-japanese-mincho
+Description: Japanese TrueType font set, Takao Mincho Fonts
+ Takao Fonts are Japanese gothic and mincho scalable fonts. They are 
+ suitable for both display and printing. This package provides them in 
+ TrueType format.
+ .
+ Takao Fonts are based on IPA Fonts and IPAex Fonts. Takao's purpose is to 
+ make it possible to maintain and release the fonts by the community with 
+ changing their names.
+ .
+ This package includes Takao Mincho, Takao P Mincho and Takao Ex Mincho.
+
+Package: fonts-takao-gothic
+Architecture: all
+Pre-Depends: dpkg (>= 1.15.6~)
+Depends: ${misc:Depends}
+Breaks: ttf-takao-gothic (<< 003.02.01-5)
+Replaces: ttf-takao-gothic (<< 003.02.01-5)
+Provides: fonts-japanese-gothic
+Description: Japanese TrueType font set, Takao Gothic Fonts
+ Takao Fonts are Japanese gothic and mincho scalable fonts. They are 
+ suitable for both display and printing. This package provides them in 
+ TrueType format.
+ .
+ Takao Fonts are based on IPA Fonts and IPAex Fonts. Takao's purpose is to 
+ make it possible to maintain and release the fonts by the community with 
+ changing their names.
+ .
+ This package includes Takao Gothic, Takao P Gothic and Takao Ex Gothic.
+
+Package: ttf-takao
+Section: oldlibs
+Priority: extra
+Architecture: all
+Pre-Depends: dpkg (>= 1.15.6~)
+Depends: fonts-takao, ${misc:Depends}
+Description: transitional dummy package
+ This package is a dummy transitional package. It can be safely removed.
+
+Package: ttf-takao-gothic
+Section: oldlibs
+Priority: extra
+Architecture: all
+Pre-Depends: dpkg (>= 1.15.6~)
+Depends: fonts-takao-gothic, ${misc:Depends}
+Description: transitional dummy package
+ This package is a dummy transitional package. It can be safely removed.
+
+Package: ttf-takao-mincho
+Section: oldlibs
+Priority: extra
+Architecture: all
+Pre-Depends: dpkg (>= 1.15.6~)
+Depends: fonts-takao-mincho, ${misc:Depends}
+Description: transitional dummy package
+ This package is a dummy transitional package. It can be safely removed.
