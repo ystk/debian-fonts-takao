@@ -4,12 +4,15 @@ Priority: optional
 Maintainer: Debian Fonts Task Force <pkg-fonts-devel@lists.alioth.debian.org>
 Uploaders: Jun Kobayashi <jkbys@ubuntu.com>, Hideki Yamane <henrich@debian.org>
 Build-Depends: debhelper (>= 9.20120518~)
-Standards-Version: 3.9.3
+Standards-Version: 3.9.4
 Homepage: https://launchpad.net/takao-fonts
+Vcs-Git: git://anonscm.debian.org/pkg-fonts/fonts-takao/
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-fonts/fonts-takao.git;a=summary
 
 Package: fonts-takao
 Architecture: all
-Pre-Depends: dpkg (>= 1.15.6~)
+Pre-Depends: dpkg (>= 1.15.6~), ${misc:Pre-Depends}
+Multi-Arch: foreign
 Depends: ${misc:Depends}, fonts-takao-gothic, fonts-takao-mincho
 Breaks: ttf-takao (<< 003.02.01-5)
 Replaces: ttf-takao (<< 003.02.01-5)
@@ -26,7 +29,8 @@ Description: Japanese TrueType font set, Takao Fonts
 
 Package: fonts-takao-mincho
 Architecture: all
-Pre-Depends: dpkg (>= 1.15.6~)
+Pre-Depends: dpkg (>= 1.15.6~), ${misc:Pre-Depends}
+Multi-Arch: foreign
 Depends: ${misc:Depends}
 Breaks: ttf-takao-mincho (<< 003.02.01-5)
 Replaces: ttf-takao-mincho (<< 003.02.01-5)
@@ -44,7 +48,8 @@ Description: Japanese TrueType font set, Takao Mincho Fonts
 
 Package: fonts-takao-gothic
 Architecture: all
-Pre-Depends: dpkg (>= 1.15.6~)
+Pre-Depends: dpkg (>= 1.15.6~), ${misc:Pre-Depends}
+Multi-Arch: foreign
 Depends: ${misc:Depends}
 Breaks: ttf-takao-gothic (<< 003.02.01-5)
 Replaces: ttf-takao-gothic (<< 003.02.01-5)
@@ -60,29 +65,3 @@ Description: Japanese TrueType font set, Takao Gothic Fonts
  .
  This package includes Takao Gothic, Takao P Gothic and Takao Ex Gothic.
 
-Package: ttf-takao
-Section: oldlibs
-Priority: extra
-Architecture: all
-Pre-Depends: dpkg (>= 1.15.6~)
-Depends: fonts-takao, ${misc:Depends}
-Description: transitional dummy package
- This package is a dummy transitional package. It can be safely removed.
-
-Package: ttf-takao-gothic
-Section: oldlibs
-Priority: extra
-Architecture: all
-Pre-Depends: dpkg (>= 1.15.6~)
-Depends: fonts-takao-gothic, ${misc:Depends}
-Description: transitional dummy package
- This package is a dummy transitional package. It can be safely removed.
-
-Package: ttf-takao-mincho
-Section: oldlibs
-Priority: extra
-Architecture: all
-Pre-Depends: dpkg (>= 1.15.6~)
-Depends: fonts-takao-mincho, ${misc:Depends}
-Description: transitional dummy package
- This package is a dummy transitional package. It can be safely removed.
